@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div id = "scorebox">
+        <div>
+            <p>ROCK</p>
+            <p>PAPER</p>
+            <P>SCISSORS</P>
+        </div>    
+        <div  id = "computer" class = " sc comScore">
+            <p>COMPUTER</p>
+            <p>SCORE</p>
+            <h1>0</h1>
+        </div>
+        <div id = "your" class = " sc yourScore">
+            <p>YOUR</p>
+            <p>SCORE</p>
+            <h1>0</h1>
+        </div>
+    </div>
+    <div class = "secondbox">
+        <div class = "hands"> 
+            <div class = " hand rock">
+                <img src="rock.png"  onclick="pickUserHand('rock')">
+            </div>
+            <div class = "hand scissors">
+                <img src = "scissors.png"  onclick="pickUserHand('scissors')">
+            </div>
+            <div class = "hand paper">
+                <img src="paper.png"  onclick="pickUserHand('paper')">
+            </div>
+        </div>
+        <div class = "contest">
+            <div class = "userhand">
+                <h1>YOU PICKED</h1>
+                <div class = "handimagecontainer">
+                    <div  id = "userPickImage" class = "hand  winner-hand scissors1">
+                        <img  src = "scissors.png" >
+                    </div>
+                </div>
+            </div>
+            <div class = "referee">
+                <div class = "decision">
+                    <h1>YOU WIN</h1>
+                    <h2>AGAINST PC</h2>
+                </div>
+                <div class = "newGame" onclick="restartGame()">PLAY AGAIN</div>
+            </div>
+            <div class = "computerhand">
+                <h1>PC PICKED</h1>
+                <div class = "handimagecontainer">
+                    <div  id = computerPickImage class = " hand  winner-hand scissors1" >
+                        <img src="scissors.png" >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "rules">
+            <div class ="gamerules">
+                <ul style="list-style-type: square;">
+                    <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+                    <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li>
+                    <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+                    <li>If both players lay down the same hand, each player lays down another hand</li>
+                </ul>
+                <button class = "btn-cls" onclick="closeBox()">x</button>
+            </div>
+        </div>
+    </div>
+    <button class = "rulebox" onclick = "rulesBox()">RULES</button>
+    <button class = "rulebox1" onclick = "rulesBox()">RULES</button>
+    <button class = "next" onclick = "next()">NEXT</button>
+    <script src = "index.js"></script>
+
+
+    <div class = "hurray" >
+        <img  class = "stars"src = "Group 5.png" >
+        <img src = "Vector.png" class = "vector">
+        <h1>HURRAY!! </h1>
+        <H3>YOU WON THE GAME</H3>
+        <div class = "newGame" onclick="restartGames()">PLAY AGAIN</div>
+    </div>
+</body>
+
+</html> 
